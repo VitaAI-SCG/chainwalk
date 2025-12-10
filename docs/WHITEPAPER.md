@@ -33,6 +33,4 @@ ChainWalk is not finished.
 
 It is unfolding.
 
-For a gentler introduction, see the [Wiki](https://github.com/VitaAI-SCG/chainwalk/wiki).
-
 🟧🟦🟥⬛⚫
