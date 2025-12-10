@@ -97,6 +97,16 @@ Documentation
 - [Contributing](docs/CONTRIBUTING.md)
 - [Constraint Map](docs/CONSTRAINT_MAP.md)
 
+### Canon · The Long-Form Papers
+
+If you want the full picture behind ChainWalk, read the Canon:
+
+- [Technical Whitepaper](docs/canon/CHAINWALK_TECHNICAL_WHITEPAPER.md)
+- [Math & Principles](docs/canon/CHAINWALK_MATH_PRINCIPLES.md)
+- [Market Thesis](docs/canon/CHAINWALK_MARKET_THESIS.md)
+- [Engineering Roadmap](docs/canon/CHAINWALK_ENGINEERING_ROADMAP.md)
+- [Origin Story](docs/canon/CHAINWALK_ORIGIN_STORY.md)
+
 Donations (optional, never required)
 
 If this work saved you time, taught you something, or reshaped how you see Bitcoin:
