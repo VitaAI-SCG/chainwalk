@@ -127,10 +127,32 @@ def check_intent_clock(intent_clock: dict, post: str, errors: List[str]) -> None
                 )
 
 
+def check_oracle_provenance(errors: List[str]) -> None:
+    """Oracle Provenance Guard: Reject impurity."""
+    from core.oracle_kernel import verify_oracle_integrity
+
+    # Check kernel integrity
+    kernel_path = Path(__file__).resolve().parent.parent / "core" / "oracle_kernel.py"
+    if kernel_path.exists():
+        kernel_code = kernel_path.read_text(encoding="utf-8")
+        if not verify_oracle_integrity(kernel_code):
+            errors.append("[SOVEREIGN-VIOLATION] Oracle kernel contains forbidden references (price, LLM, sentiment, off-chain)")
+
+    # Check for modified constraint symbols (placeholder: assume fixed)
+    # In future, compare against immutable hash
+
+    # Check for mutated band semantics (placeholder)
+    # Ensure bands like CTI low/medium/high are not altered
+
+    # Check for illegal dependencies (e.g., no new imports referencing forbidden things)
+    # Placeholder: scan for forbidden imports
+
 def main() -> None:
     errors: List[str] = []
 
     reports_dir = Path(__file__).resolve().parent.parent / "reports"
+
+    check_oracle_provenance(errors)
 
     daily = load_json("chainwalk_daily_state.json")
     memory = load_json("memory_of_price_state.json")

@@ -1,0 +1,15 @@
+# Dockerfile.min — Zero-Dependency Bootstrap Image
+FROM python:3.10-slim
+
+# Copy only essential files
+COPY core/oracle_kernel.py /app/core/
+COPY CHAINWALK_DAILY_BRIEF.py /app/
+COPY requirements.txt /app/
+
+# No external dependencies beyond stdlib
+# requirements.txt should be empty or minimal (requests only if needed)
+
+WORKDIR /app
+
+# Run the oracle
+CMD ["python", "CHAINWALK_DAILY_BRIEF.py"]

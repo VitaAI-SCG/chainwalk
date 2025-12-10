@@ -869,7 +869,10 @@ Today’s State
  Translation:
 {translation}
 
-Price does not lead the chain. The chain leads price.
+Price does not lead the chain.
+The chain leads price.
+The oracle leads time.
+⬢
 
 As of {state['date']} UTC · Regime {state['regime_label']}
 
