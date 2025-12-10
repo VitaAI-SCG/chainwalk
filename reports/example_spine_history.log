@@ -1,0 +1,2 @@
+CWSPINE v0.1 | 2025-12-01 | R=ASCENT,EARLY | CTI=4.2 | CUST=neutral(0) | ENT=flat | PC=permitted | ID=0.15 | IC=1d | RC=5-30d | HR=stable,calm,0.4 | TH=normal,0.50 | EP=relaxed,0.00 | MC=coil_enforced,UNKNOWN | IRQ=stable,0.40 | REI=charged,0.35 | OIH=example_hash
+CWSPINE v0.1 | 2025-12-02 | R=COMPRESSION,MID | CTI=5.0 | CUST=neutral(0) | ENT=flat | PC=permitted | ID=0.18 | IC=0d | RC=10-40d | HR=rising,calm,0.5 | TH=strained,0.60 | EP=relaxed,0.00 | MC=coil_enforced,UNKNOWN | IRQ=primed,0.45 | REI=charged,0.40 | OIH=another_hash

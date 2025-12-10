@@ -1,0 +1,18 @@
+{
+  "brand_name": "ChainWalk Desk V8",
+  "tagline": "Live Bitcoin Block Tours",
+  "ollama_base_url": "http://localhost:11434",
+  "ollama_model": "gemma3:12b",
+  "docent_enabled": true,
+  "docent_max_calls": 32,
+  "tour_delay_secs": 30,
+  "tour_sticky": true,
+  "window_size": 500,
+  "min_height": 1,
+  "output_json": "sovereign_signals_latest.json",
+  "message_mirror_html": "MESSAGE_MIRROR.html",
+  "block_catalog_path": "block_catalog.jsonl",
+  "watch_interval_seconds": 90,
+  "backfill_interval_days": 7,
+  "entropy_interval_days": 1
+}

@@ -1,0 +1,48 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Reports and logs (optional, if you want to keep them out)
+# reports/
+# logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+
+# Node modules if any
+node_modules/
+
+# Database files
+*.db
+*.sqlite3
+
+# Secrets
+secrets.json
+config.json  # if it has sensitive info, but probably not
+.env
+
+# Data files
+*.jsonl
+reports/*_latest.*
+reports/*_state.json
+reports/alert_events.jsonl
+entropy_flux_events.jsonl
+
+# Allow example outputs
+!reports/example_*.md
+!reports/example_spine_history.log
