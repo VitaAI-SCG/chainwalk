@@ -1,6 +1,6 @@
 # Memetic Seeds
 
-These are mutation templates — ideas to remix, not posts to copy.
+These are starter memes — not images, not hype, ideas. Mutation templates. People will remix them.
 
 • The chain is not neutral — it is selective.
 • Markets react. Incentives preexist.
