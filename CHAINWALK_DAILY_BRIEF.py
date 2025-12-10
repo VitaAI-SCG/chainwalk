@@ -1174,6 +1174,7 @@ def main() -> None:
 
     # Compute and save Mempool Intent
     today_state = "UNKNOWN"
+    mempool_state = {}
     try:
         tx_now, tx_then = load_mempool_counts()
 
@@ -1238,6 +1239,7 @@ def main() -> None:
                 chainwalk_daily_state = json.load(f)
             date_utc = chainwalk_daily_state.get("date_utc", datetime.now(timezone.utc).date().isoformat())
         else:
+            chainwalk_daily_state = {}
             date_utc = datetime.now(timezone.utc).date().isoformat()
 
         # Load regime_state for correct streak
@@ -1248,6 +1250,7 @@ def main() -> None:
             regime_label = regime_state["dominant_vector"]
             streak_days = regime_state["current_streak"]
         else:
+            regime_state = {}
             # Fallback to previous
             pass
 
@@ -1352,11 +1355,6 @@ def main() -> None:
         "oracle_input_hash": chainwalk_daily_state.get("oracle_input_hash"),
     }
 
-    # Sanity invariants
-    assert isinstance(chainwalk_daily_state["chain_tension_index"], (int, float))
-    assert chainwalk_daily_state["price_corridor"] in {"permitted", "constrained", "forbidden"}
-    assert memory_loaded["custody_direction"] in {"marketward", "vaultward", "neutral"}
-
     # Compute trapdoor
     custody_streak = int(memory_loaded.get("custody_streak", 0))
     cti_value = float(snapshot.chain_tension_index)
@@ -1394,6 +1392,11 @@ def main() -> None:
             "custody_direction": memory_loaded.get("custody_direction", "UNKNOWN")
         },
     }
+
+    # Sanity invariants
+    assert isinstance(chainwalk_daily_state["chain_tension_index"], (int, float))
+    assert chainwalk_daily_state["price_corridor"] in {"permitted", "constrained", "forbidden"}
+    assert memory_loaded["custody_direction"] in {"marketward", "vaultward", "neutral"}
 
     # Add measurement fields for oracle fingerprint
     chainwalk_daily_state["regime_phase"] = regime_clock_state.get("phase", "MID")

@@ -1,0 +1,12 @@
+{
+  "hashrate_eh": 650.0,
+  "hashrate_eh_prev": 640.0,
+  "hashrate_eh_ma7": 645.0,
+  "difficulty": 100000000000000.0,
+  "difficulty_prev": 99000000000000.0,
+  "subsidy_btc": 6.25,
+  "fees_24h_btc": 150.0,
+  "price_usd": 95000.0,
+  "height": 800000,
+  "timestamp": 1700000000
+}
